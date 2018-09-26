@@ -132,3 +132,9 @@ LOGOUT_REDIRECT_URL="welcome"
 LOGIN_URL="member_login"
 
 CRISPY_TEMPLATE_PACK='bootstrap3'
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'hitpydevelopers@gmail.com'
+EMAIL_HOST_PASSWORD = 'dj4ng0dj4ng0'
+EMAIL_PORT = 587
