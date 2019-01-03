@@ -25,7 +25,7 @@ SECRET_KEY = 'foysmi-k1!dcf$q=#3xl&ncfh8eoln^qrlwr-x&upo-^22xp_u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['localhost', http://hitpythondevelopers.pythonanywhere.com/]
 
 
 # Application definition
@@ -123,6 +123,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT= '/home/hitpythondevelopers/webapp/static/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
