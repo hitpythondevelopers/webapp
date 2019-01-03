@@ -10,7 +10,15 @@ class SignUpForm(UserCreationForm):
 
     class Meta:
         model = User
-        fields = ('username', 'email', 'password1', 'password2', )
+        fields = ('username', 'email', 'password' )
+
+    def clean(self):
+        cleaned_data = super(SignUpForm, self).clean()
+        name = cleaned_data.get('username')
+        email = cleaned_data.get('email')
+        password = cleaned_data.get('password')
+        if not name and not email and not password:
+            raise forms.ValidationError('Please fill in all the fields!')
 
 
     

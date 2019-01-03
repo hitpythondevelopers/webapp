@@ -146,11 +146,11 @@
             <!--<li><a href="{% url 'member_portfolio' %}">Portfolio</a></li>-->
             <li><a class="navbar-items" href="{% url 'blog_home' %}">Blog</a></li>
             <li><a class="navbar-items" href="{% url 'website_contact' %}">Contact Us</a></li>
-            {% if user.is_authenticated %}
+            <!--{% if user.is_authenticated %}
                 <li><a class="navbar-items" href="{% url 'member_logout'%}">Logout</a></li>
             {% else %}
                 <li><a class="navbar-items" href="{% url 'member_login' %}">Login</a></li>
-            {% endif %}
+            {% endif %}-->
             
           </ul>
         </div>
@@ -171,12 +171,11 @@
     <div class="footer">
         
         <ul >
-            <li><a href="/"><img src="static/img/twitter.png" alt="Twitter" width="40" height="40"></a></li>
-            <li><a href="/"><img src="static/img/facebook.png" alt="Facebook" width="35" height="35"></a></li>
-            <li><a href="/"><img src="static/img/gmail.png" alt="Gmail" width="35" height="35"></a></li>
-            <li><a href="/"><img src="static/img/google.png" alt="Google+" width="35" height="35"></a></li>
-            <li><a href="/"><img src="static/img/instagram.jpeg" alt="Instagram" width="35" height="35"></a></li>
-            <li><a href="/"><img src="static/img/github.png" alt="Github" width="35" height="35"></a></li>
+            <li><a href="/"><img src="static/img/twitter.png" alt="Twitter" width="20" height="25"></a></li>
+            <li><a href="/"><img src="static/img/facebook.png" alt="Facebook" width="20" height="20"></a></li>
+            <li><a href="/"><img src="static/img/gmail.png" alt="Gmail" width="20" height="20"></a></li>
+            <li><a href="/"><img src="static/img/instagram.jpeg" alt="Instagram" width="20" height="20"></a></li>
+            <li><a href="/"><img src="static/img/github.png" alt="Github" width="20" height="20"></a></li>
             
         </ul>
     </div>
