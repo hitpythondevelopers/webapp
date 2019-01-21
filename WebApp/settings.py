@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'website',
     'member',
     'blog',
+    #'sendemail.apps.SendemailConfig',
 ]
 
 MIDDLEWARE = [
@@ -130,10 +131,10 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
     ]
 
-LOGIN_REDIRECT_URL="member_home"
-LOGOUT_REDIRECT_URL="welcome"
-LOGIN_URL="member_login"
+LOGIN_REDIRECT_URL=""
+LOGOUT_REDIRECT_URL=""
+LOGIN_URL=""
 
 CRISPY_TEMPLATE_PACK='bootstrap3'
 
-ACCOUNT_ACTIVATION_DAYS= 1 #1 day activation window
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
