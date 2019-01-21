@@ -25,11 +25,8 @@ SECRET_KEY = 'foysmi-k1!dcf$q=#3xl&ncfh8eoln^qrlwr-x&upo-^22xp_u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-<<<<<<< HEAD
+
 ALLOWED_HOSTS = ['hitpythondevelopers.pythonanywhere.com']
-=======
-ALLOWED_HOSTS = ['localhost', http://hitpythondevelopers.pythonanywhere.com/]
->>>>>>> f4f1a23e952d2253ce98a7cc17975cba57f5b224
 
 
 # Application definition
