@@ -12,7 +12,6 @@ class Blog(models.Model):
     def __unicode__(self):
         return '%s' % self.title
 
-    
     def get_absolute_url(self):
         return ('view_blog_post', None, { 'slug': self.slug })
 
@@ -23,6 +22,5 @@ class Category(models.Model):
     def __unicode__(self):
         return '%s' % self.title
 
-    
     def get_absolute_url(self):
         return ('view_blog_category', None, { 'slug': self.slug })
