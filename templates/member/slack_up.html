@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    Join Slack
+{% endblock %}
+
+{% block content %}
+    <div class="content-container">
+        <div class="form-container">
+            <div class="card">
+                <div class="card-body">
+                        <h3>Hey Pythonista!</h3><hr/>
+                        <p>Slack is where work flows. It's where the people you need,
+                         the information you share, and the tools you use come together to get things done. We operate on Slack,
+                         unfortunately the API doesn't offer multiple invites. Just send us your email and you'll get the invite straight to your inbox.</p>
+                        <form method="POST">
+                            {% csrf_token %}
+                            {{ form | crispy }}
+                            <button type="submit">Submit</button><hr/>
+                        </form>
+                        <p>Woohoo! You're now officially a member of the HIT Pythoneers.Now head on to 
+                        your mailbox and aceept the invitation to join our workspace. Happy Pythoning!</p>
+
+                </div>
+            </div>
+           
+
+        </div>
+
+    </div>
+{% endblock %}

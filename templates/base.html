@@ -143,14 +143,9 @@
         <div class="navbar-items">
           <ul style="float:right">
             <li><a class="navbar-items" href="{% url 'website_about' %}">About Us</a></li>
-            <!--<li><a href="{% url 'member_portfolio' %}">Portfolio</a></li>-->
             <li><a class="navbar-items" href="{% url 'blog_home' %}">Blog</a></li>
             <li><a class="navbar-items" href="{% url 'website_contact' %}">Contact Us</a></li>
-            <!--{% if user.is_authenticated %}
-                <li><a class="navbar-items" href="{% url 'member_logout'%}">Logout</a></li>
-            {% else %}
-                <li><a class="navbar-items" href="{% url 'member_login' %}">Login</a></li>
-            {% endif %}-->
+            <li><a class="navbar-items" href="{% url 'member_slack' %}">Join Slack</a></li>
 
           </ul>
         </div>
