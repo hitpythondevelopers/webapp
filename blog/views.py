@@ -5,7 +5,7 @@ from django.shortcuts import render_to_response, get_object_or_404
 # Create your views here.
 def home(request):
     return render(request, 'blog/home.html', 
-    {'categories': Category.objects.all(), 'posts': Blog.ojects.all()[:5]
+    {'categories': Category.objects.all(), 'posts': Blog.objects.all()[:5]
     })
 
 def view_post(request, slug):   

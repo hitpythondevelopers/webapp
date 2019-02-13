@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'foysmi-k1!dcf$q=#3xl&ncfh8eoln^qrlwr-x&upo-^22xp_u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['hitpythondevelopers.pythonanywhere.com', 'localhost']
 
@@ -137,4 +137,9 @@ LOGIN_URL=""
 
 CRISPY_TEMPLATE_PACK='bootstrap3'
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_HOST_USER = "hitpythondevelopers@gmail.com"
+EMAIL_HOST_PASSWORD = 'EverythingPython2019!'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True

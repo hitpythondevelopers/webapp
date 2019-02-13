@@ -5,18 +5,13 @@ from crispy_forms.helper import FormHelper
 
 
 
-class SlackForm():
-    email = forms.EmailField(max_length=254, help_text='Required. Inform a valid email address.')
+class SlackForm(forms.Form):
+    name = forms.CharField(max_length=255)
+    email = forms.EmailField(max_length=254)
 
-    class Meta:
-        model = User
-        fields = ( 'email',)
-
-    def clean(self):
-        cleaned_data = super(SlackForm, self).clean()
-        email = cleaned_data.get('email')
-        if not email:
-            raise forms.ValidationError('Please enter your email in the field provided!')
-
+    def __init__(self, *args, **kwargs):
+        super(SlackForm, self).__init__(*args, **kwargs)
+        self.fields['name'].label = "Your name:"
+        self.fields['email'].label = "Your email:"
 
     
