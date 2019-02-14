@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'foysmi-k1!dcf$q=#3xl&ncfh8eoln^qrlwr-x&upo-^22xp_u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['hitpythondevelopers.pythonanywhere.com', 'localhost']
 
@@ -132,8 +132,6 @@ STATICFILES_DIRS = [
 LOGIN_REDIRECT_URL=""
 LOGOUT_REDIRECT_URL=""
 LOGIN_URL=""
-
-CRISPY_TEMPLATE_PACK='bootstrap3'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = "smtp.gmail.com"
