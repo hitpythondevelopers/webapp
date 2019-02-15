@@ -139,3 +139,5 @@ EMAIL_HOST_USER = "hitpythondevelopers@gmail.com"
 EMAIL_HOST_PASSWORD = 'EverythingPython2019!'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
