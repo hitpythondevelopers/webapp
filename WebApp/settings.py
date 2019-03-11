@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'website',
     'member',
     'blog',
-    #'sendemail.apps.SendemailConfig',
+    
 ]
 
 MIDDLEWARE = [
@@ -51,7 +51,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'WebApp.urls'
@@ -140,4 +139,3 @@ EMAIL_HOST_PASSWORD = 'EverythingPython2019!'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
