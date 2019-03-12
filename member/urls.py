@@ -2,10 +2,10 @@ from django.conf.urls import url
 from django.contrib.auth.views import LoginView, LogoutView
 
 
-from .views import slack_up, success
+from .views import slack_up
 
 urlpatterns = [
-    url(r'^slack/', slack_up, name='member_slack'),
-    url(r'^success/',success, name='success'),
+    url(r'^slack/', slack_up, name='signup'),
+   
 
 ]
