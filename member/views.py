@@ -8,11 +8,11 @@ from .forms import SlackForm
 
 def slack_up(request):
     if request.method == 'GET':
-        form = SlackForm
-    else:
+        form = SlackForm()
+    elif request.method == 'POST':
         form = SlackForm(request.POST)
         if form.is_valid():
-            username = form.cleaned_data['name']
+            username = form.cleaned_data['username']
             email = form.cleaned_data['email']
             message = "{0} has sent you a new message:\n\n{1}".format(username, email)
 
@@ -26,4 +26,3 @@ def slack_up(request):
 
 
             
-    

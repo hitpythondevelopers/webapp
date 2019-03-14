@@ -8,9 +8,11 @@ class SlackForm(forms.Form):
     username = forms.CharField(max_length=255)
     email = forms.EmailField(max_length=254)
 
-    def __init__(self, *args, **kwargs):
-        super(SlackForm, self).__init__(*args, **kwargs)
-        self.fields['username'].label = "Your name:"
-        self.fields['email'].label = "Your email:"
+    def clean(self):
+        cleaned_data = super(SlackForm, self).clean()
+        username = cleaned_data.get('username')
+        email = cleaned_data.get('email')
+        if not username and not email:
+            raise forms.ValidationError('You have to write something!')
 
     
