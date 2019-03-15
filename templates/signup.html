@@ -40,23 +40,31 @@
 
 				<form class="login100-form validate-form" method="post">
 					{% csrf_token %}
+					{{form.as_ul }}
+					
 					<div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
-						<span class="label-input100">Username</span>
+						
+						<!--<span class="label-input100">Username</span>
 						<input class="input100" type="text" name="{{ form.name.username }}" 
+						{% if form.name.value != None %} value="{{ form.name.value|stringformat:'s'}}"{% endif %}
+						{% if form.name.field.required %}required{% endif %}
 						 placeholder="Enter username">
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input m-b-18" data-validate = "Email is required">
 						<span class="label-input100">Email</span>
-						<input class="input100" type="text" name="{{ form.name.email }}"  placeholder="Enter email">
+						<input class="input100" type="text" name="{{ form.name.email }}" 
+						{% if form.name.value != None %} value="{{ form.name.value|stringformat:'s'}}"{% endif %}
+						{% if form.name.field.required %}required{% endif %}
+						placeholder="Enter email">
 						<span class="focus-input100"></span>
-					</div><br/>
+					</div><br/>-->
 
 
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-						<input type="submit">		
+						<button class="login100-form-btn" type="submit">
+						Submit		
 						</button>
 					</div>
 				</form>
